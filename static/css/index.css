@@ -103,13 +103,55 @@ body {
   padding: 4rem 1.5rem;
 }
 
+.hero:not(.teaser) .hero-body {
+  padding-bottom: 1rem;
+}
+
 .teaser .hero-body {
-  padding-top: 2rem;
+  padding-top: 0.25rem;
   padding-bottom: 4rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .teaser {
   font-family: 'Inter', sans-serif;
+}
+
+.teaser-container {
+  max-width: none;
+  width: 100%;
+}
+
+.teaser-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.teaser-video-item {
+  min-width: 0;
+}
+
+.teaser-video {
+  width: 100%;
+  height: calc((100vw - 2.25rem) / 2 * 0.48);
+  max-height: 460px;
+  min-height: 260px;
+  object-fit: contain;
+  background: #000;
+  border-radius: 8px;
+  display: block;
+}
+
+.teaser-video-title {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  color: var(--text-primary);
+  font-size: 1.55rem;
+  font-weight: 600;
+  line-height: 1.25;
 }
 
 
@@ -118,8 +160,9 @@ body {
     font-family: 'Inter', sans-serif !important;
     font-weight: 800 !important;
     color: var(--text-primary) !important;
-    margin-bottom: 2rem !important;
+    margin-bottom: 1rem !important;
     line-height: 1.1 !important;
+    font-size: 3rem !important;
 }
 
 .publication-banner {
@@ -650,7 +693,7 @@ code {
   .teaser .hero-body {
     padding: 1rem;
   }
-  
+
   .content.has-text-justified {
     font-size: 1rem;
   }
@@ -748,6 +791,3 @@ a:focus {
     box-shadow: none !important;
   }
 }
-
-
-

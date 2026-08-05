@@ -82,7 +82,7 @@
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/index.css?v=20260503-1">
   
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -190,7 +190,7 @@
   <main id="main-content">
   <section class="hero">
     <div class="hero-body">
-      <div class="container is-max-desktop">
+      <div class="container is-widescreen publication-title-container">
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
@@ -225,17 +225,28 @@
 
 <!-- Teaser video-->
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container is-fluid teaser-container">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="assets/v1.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-    MSU Private 5G/6G Network Platform RU.       <a href="#video-demo-section"> See the VR Evaluation Demo Video →</a>
-      </h2>
+      <div class="teaser-video-grid" id="video-demo-section">
+        <div class="teaser-video-item">
+          <video poster="" id="tree" class="teaser-video" autoplay controls muted loop playsinline preload="metadata">
+            <source src="assets/v1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <h2 class="subtitle has-text-centered teaser-video-title">
+            Private 5G/6G Network Platform.
+          </h2>
+        </div>
+        <div class="teaser-video-item">
+          <video class="teaser-video" autoplay controls muted loop playsinline preload="metadata">
+            <source src="assets/0423_speed.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <h2 class="subtitle has-text-centered teaser-video-title">
+            VR Evaluation Demo Video.
+          </h2>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -249,10 +260,8 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
-          <p> Emerging delay-critical edge AI applications, such as VR perception and real-time video analytics, impose stringent latency and reliability requirements on 5G networks. However, existing mobility management mechanisms are largely
-reactive and fail to adapt to dynamic network conditions, resulting in suboptimal handover decisions and degraded performance. In this paper, we present Mobiman, a 5G Open Radio Access Network (O-RAN) system that optimizes user mobil-
-ity management for delay-critical edge AI offloading. The core of Mobiman is a temporal graph model that captures the spatiotemporal dynamics of the RAN across users and cells, enabling near real-time handover decisions. Building on this representation, we design a multi-agent reinforcement learning (MARL) framework with rule-based action masking and proactive resource preparation to ensure safe, stable, and efficient handovers. We implement Mobiman on a multi-cell indoor
-5G O-RAN testbed and evaluate it using diverse VR workloads. Extensive experiments show that Mobiman reduces tail latency by up to 40% and packet loss by up to 84% compared to existing approaches.
+          <p> Emerging delay-critical edge AI applications, such as VR perception and real-time video analytics, impose stringent latency and reliability requirements on 5G networks. However, existing mobility management mechanisms are largely reactive and fail to adapt to dynamic network conditions, resulting in suboptimal handover decisions and degraded performance. In this paper, we present Mobiman, a 5G Open Radio Access Network (O-RAN) system that optimizes user mobility management for delay-critical edge AI offloading. The core of Mobiman is a temporal graph model that captures the spatiotemporal dynamics of the RAN across users and cells, enabling near real-time handover decisions. Building on this representation, we design a multi-agent reinforcement learning (MARL) framework with rule-based action masking and proactive resource preparation to ensure safe, stable, and efficient handovers. We implement Mobiman on a multi-cell indoor
+5G O-RAN testbed and evaluate it using diverse VR workloads. Extensive experiments show that Mobiman reduces tail latency by up to 44% and packet loss by up to 56% compared to state-of-the-art approaches.
           </p>
         </div>
       </div>
@@ -315,43 +324,6 @@ ity management for delay-critical edge AI offloading. The core of Mobiman is a t
 </div>
 </section>
 <!-- End image carousel -->
-
-
-
-<!-- Video Demo -->
-<section class="hero is-small is-light" id="video-demo-section">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Video Demo</h2>
-
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-
-          <video
-            id="video-demo"
-            width="100%"
-            autoplay
-            muted
-            loop
-            controls
-            playsinline
-            preload="metadata"
-            style="border-radius: 8px;"
-          >
-            <source src="assets/v1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
 
 
 
