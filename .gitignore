@@ -1,0 +1,9 @@
+# OS / editor junk
+__pycache__/
+*.pyc
+.DS_Store
+
+# Contains real SIM authentication credentials (Key/OPc) — do not commit as-is.
+# See conversation history: replace with sanitized example values before untracking this line.
+source/core/subscribers.json
+source/core/subscriber_db.csv
